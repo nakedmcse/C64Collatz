@@ -2,7 +2,7 @@
 20 t1 = ti
 30 for i=1 to 100
 40 s = 0 : sd = i : gosub 1000
-50 print "seed";sd;"steps";s
+50 print "seed";i;"steps";s
 60 next i
 70 t2 = ti
 80 el = (t2 - t1) / 60
