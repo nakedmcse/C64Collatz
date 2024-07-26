@@ -8,13 +8,13 @@
 int collatz(int seed) {
     int steps = 0;
     while(seed > 1) {
-        if(seed%2 == 0) {
+        if((seed & 1) == 0) {
             steps++;
-            seed /= 2;
+            seed = seed >> 1;
             continue;
         }
         steps++;
-        seed = seed*3+1;
+        seed = (seed << 1) + seed +1;
     }
     return steps;
 }
